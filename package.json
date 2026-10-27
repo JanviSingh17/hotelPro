@@ -1,0 +1,27 @@
+{
+  "name": "hotelpro",
+  "version": "1.0.0",
+  "description": "HotelPro - Complete Hotel Booking and Management Solution (MERN Stack)",
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "install:all": "npm run install:server && npm run install:client",
+    "start": "cd server && npm start",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && node seeder/seed.js"
+  },
+  "keywords": [
+    "mern",
+    "hotel-management",
+    "booking-system",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "HotelPro Team",
+  "license": "MIT",
+  "devDependencies": {
+    "isomorphic-git": "^1.44.5"
+  }
+}

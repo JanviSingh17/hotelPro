@@ -1,0 +1,211 @@
+:root {
+  --primary-navy: #0f172a;
+  --secondary-navy: #1e293b;
+  --gold-accent: #c59b27;
+  --gold-hover: #b38a1f;
+  --gold-light: #fef9c3;
+  --gold-subtle: rgba(197, 155, 39, 0.12);
+  --bg-soft: #f8fafc;
+  --card-border: #e2e8f0;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-soft);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-serif {
+  font-family: var(--font-heading);
+}
+
+/* Navbar */
+.navbar-custom {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.85rem 0;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 0.5px;
+}
+
+.brand-logo span {
+  color: var(--gold-accent);
+}
+
+.nav-link-custom {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.2s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #fff !important;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  position: relative;
+  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
+              url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #fff;
+  padding: 6rem 0 5rem;
+  border-bottom: 3px solid var(--gold-accent);
+}
+
+/* Custom Buttons */
+.btn-gold {
+  background-color: var(--gold-accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.35);
+}
+
+.btn-gold-outline {
+  border: 1.5px solid var(--gold-accent);
+  color: var(--gold-accent);
+  background: transparent;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-gold-outline:hover {
+  background: var(--gold-accent);
+  color: #fff;
+}
+
+/* Room Cards */
+.room-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.12);
+}
+
+.room-image-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.room-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.room-card:hover .room-image-wrap img {
+  transform: scale(1.04);
+}
+
+.room-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #f1f5f9;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.room-price-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Search Box */
+.search-floating-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.2);
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 10;
+  border: 1px solid var(--card-border);
+}
+
+/* Badges & Pills */
+.badge-status-confirmed {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.badge-status-checked-in {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.badge-status-checked-out {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+}
+
+.badge-status-cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: var(--primary-navy);
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
